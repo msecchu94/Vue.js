@@ -1,0 +1,27 @@
+Intalacion Vue CLI :
+
+1) npm install -g @vue/cli -/- vue --version
+2) vue create -/- npm runat server
+3) vue ui (interfaz)
+
+Platzi : 
+
+1) Expresiones: 
+
+2) Directivas: Marcadores o atributos para realizar transformaciones en atributos html.
+
+(v-show: lo oculta / v-if (v-else):lo elimina del DOM).
+
+(v-for:array).
+
+3)DataBinding:(reactividad(codigo-vista => vista-codigo)).
+
+4)v-model: enlazar campos de texto con propiedades de nuestro view model.
+
+5)v-bind: enlazar atributo de elemento html con propiedad de view model.
+
+6)Propiedades Computadas: propiedades regeneradas que cambian su valor a traves del cambio de otras propiedades.
+
+7)Whatches: al igual que las propiedades computas no permite ejecutar codigo a partir de que una propiedad del view model cambia(no devuelve valor,no son propiedades , no pueden ser usadas en expresiones).uso comun: desencadenar una llamada http a partir de que un valor en un inpit cambie. 
+
+8)Eventos: methods q modifican el DOM.
