@@ -30,6 +30,10 @@ d)Edite la parte <style> del archivo App.vue 'para importar Bootsrap al css raí
 
 e)Ejecute su aplicación Vue desde la CLI:npm start .
 
+5) babel: transpilador(package.json estan incluidas las dependencias y en webpack config. las babel.loader)
+
+6)ESlint:set de reglas-customiza estilo de codigo propio(o utiliza los ya definidos)(usamos standartjs)(https://standardjs.com/,https://github.com/standard/eslint-config-standard)(npm i -D descarga e instala en nuestro package.json sin tener que configurar)
+
 Platzi : 
 
 1) Expresiones: 
