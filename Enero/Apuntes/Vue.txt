@@ -55,3 +55,14 @@ Platzi :
 7)Whatches: al igual que las propiedades computas no permite ejecutar codigo a partir de que una propiedad del view model cambia(no devuelve valor,no son propiedades , no pueden ser usadas en expresiones).uso comun: desencadenar una llamada http a partir de que un valor en un inpit cambie. 
 
 8)Eventos: methods q modifican el DOM.
+
+9) Servicios:(http,llamar archivos con la logica de negocio)(importando y exportando modulos ies module(ecmascript 2015(modularizacion)))
+config.js(const configService={apiUrl='http://platzi-music.now.sh'})
+
+10)fetchApi(documentacion)minimalistic fetch(repositorio libreria trae/para hacer peticiones http(npm i -S trae))
+
+11)componentes:(siempre deben tener unj unico padre)....
+
+ConfigComponent: 1)Manera Global: se crea componente(html).., en el js principal (vue.component('nombre del tag con el cual se va a importar ej. 'child','componente'ej.'ChildComponent')y se usa en cualquier parte de otro componente con vue.component)
+
+2)Manera Local: Import componente dentro de otro y export default (components:igual q de manera global )para utilizarlo en el html del componente 
