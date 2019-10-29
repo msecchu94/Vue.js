@@ -66,3 +66,22 @@ config.js(const configService={apiUrl='http://platzi-music.now.sh'})
 ConfigComponent: 1)Manera Global: se crea componente(html).., en el js principal (vue.component('nombre del tag con el cual se va a importar ej. 'child','componente'ej.'ChildComponent')y se usa en cualquier parte de otro componente con vue.component)
 
 2)Manera Local: Import componente dentro de otro y export default (components:igual q de manera global )para utilizarlo en el html del componente 
+
+12)Reactividad: lo que le permite al framework evaluar si se modifico algo,para que propague los cambios y las vistas se actualizen de forma dinamica
+
+Limitaciones:(1-data debe ser siempre una funsion que devuelve un objeto(instancias diferentes),2-vue no permite crear propiedades dinamicas a los objetos (si se crea pero el whatcher nunca se entera)//solucion:1(especificar1)- this.$set(this.person,'lastname','secchi')),2(especificar varias)-this.person.Objet.assing({},this.person,{a:1,b:2})
+
+13)Ciclo de Vida:Hooks
+				a-beforCreate(antes de que se cree el componente)
+				b-created(instancia de vue creada,pero aun no existe dentro del DOM)
+				C-beforeMount(se crea , se compilar,pero aun no existe dentro del DOM)
+				d-mounted(ya existe en el DOM)
+				e-beforeUpdate(se ejecuta cada vez que hay un cambio dentro de la data pero todavia no se reflejo el cambio en pantalla)
+				f-updated(cambio reflejado en DOM)
+				g-beforeDestroy(Antes de la destruccion,existe en el DOM)
+				d-destroyed(DESTRUIDO)
+
+14)Comunicacion entre componentes: puglin
+
+15) VueRouter :installe vue route
+ permite aplicar redireccionamientos y rutas del lado del cliente (spa) ( cara: rutas añidadas,modular,rutas con parametro,transiciones,modo historial html5) (http://router.vuejs.org/)

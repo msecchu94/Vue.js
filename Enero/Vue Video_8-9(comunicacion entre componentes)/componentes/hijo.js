@@ -11,7 +11,6 @@ Vue.component('hijo', {
     data() {
 
         return {
-
             nombre: 'Maxi'
         }
 
@@ -19,10 +18,5 @@ Vue.component('hijo', {
     mounted() {
 
         this.$emit('nombreHijo',this.nombre);
-
-   
-
 }
-
-
 })
