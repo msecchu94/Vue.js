@@ -52,7 +52,7 @@ Platzi :
 
 6)Propiedades Computadas: propiedades regeneradas que cambian su valor a traves del cambio de otras propiedades.
 
-7)Whatches: al igual que las propiedades computas no permite ejecutar codigo a partir de que una propiedad del view model cambia(no devuelve valor,no son propiedades , no pueden ser usadas en expresiones).uso comun: desencadenar una llamada http a partir de que un valor en un inpit cambie. 
+7)Whatches: al igual que las propiedades computas no permite ejecutar codigo a partir de que una propiedad del view model cambia(no devuelve valor,no son propiedades , no pueden ser usadas en expresiones).uso comun: desencadenar una llamada http a partir de que un valor en un input cambie. (se debe llamar igual que la propiedad observada)
 
 8)Eventos: methods q modifican el DOM.
 
@@ -85,3 +85,7 @@ Limitaciones:(1-data debe ser siempre una funsion que devuelve un objeto(instanc
 
 15) VueRouter :installe vue route
  permite aplicar redireccionamientos y rutas del lado del cliente (spa) ( cara: rutas añidadas,modular,rutas con parametro,transiciones,modo historial html5) (http://router.vuejs.org/)
+
+16)Slots:funcionalidad de los componentes que permite inyectar elemento html de manera dinamica.
+
+
