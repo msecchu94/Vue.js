@@ -48,7 +48,7 @@ Platzi :
 
 4)v-model: enlazar campos de texto con propiedades de nuestro view model.
 
-5)v-bind: enlazar atributo de elemento html con propiedad de view model.
+5)v-bind(:): enlazar atributo de elemento html con propiedad de view model.
 
 6)Propiedades Computadas: propiedades regeneradas que cambian su valor a traves del cambio de otras propiedades.
 
@@ -81,11 +81,13 @@ Limitaciones:(1-data debe ser siempre una funsion que devuelve un objeto(instanc
 				g-beforeDestroy(Antes de la destruccion,existe en el DOM)
 				d-destroyed(DESTRUIDO)
 
-14)Comunicacion entre componentes: puglin
-
+14)Comunicacion entre componentes: puglin.
+    
 15) VueRouter :installe vue route
  permite aplicar redireccionamientos y rutas del lado del cliente (spa) ( cara: rutas añidadas,modular,rutas con parametro,transiciones,modo historial html5) (http://router.vuejs.org/)
 
-16)Slots:funcionalidad de los componentes que permite inyectar elemento html de manera dinamica.
+16)Slots:funcionalidad de los componentes que permite inyectar elemento html de manera dinamica.  
+
+17)Router: se define ,se proporciona elemento html : (router-link : to="...")
 
 
