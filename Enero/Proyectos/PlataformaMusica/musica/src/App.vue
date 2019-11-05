@@ -1,32 +1,49 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+ <b-navbar toggleable="lg" type="dark" variant="info">
+
+ <b-navbar-nav class="ml-auto">
+     <b-nav-form>
+          <b-form-input type="text" size="sm" class="mr-sm-2" placeholder="Buscar" v-model="searchQuery"></b-form-input>
+          <b-button size="sm" class="my-2 my-sm-0" type="submit" @click="search" >Buscar</b-button>
+        </b-nav-form>
+ </b-navbar-nav>
+
+ </b-navbar>
+
+ <div class="container">
+    <b-list-group>
+      <b-list-group-item  v-for="t in tracks">{{t.name}} - {{t.artist}}</b-list-group-item>
+    </b-list-group>
+</div>
+
+<p>{{serchMessage}}</p>
+
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import trackService from './services/track.js'
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name:'app',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  data() {
+    return {
+      searchQuery:'',
+      tracks:[]
+    }
+  },
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+  computed: {
+    serchMessage (){return `Encontrados : ${this.tracks.length}`}
+  },
+  methods: {
+    search(){
+    trackService.search(this.searchQuery)
+.then(res=>{console.log(res)})
+    }
+  }
+
 }
-</style>
+</script>

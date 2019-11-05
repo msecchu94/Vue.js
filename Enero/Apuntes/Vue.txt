@@ -6,30 +6,7 @@ Intalacion Vue CLI :
 
 2) vue create -/- npm runat server
 3) vue ui (interfaz)
-4)incluir bbotstrap junto con sus dependencias, jQuery y Popper.js:
-
-
-a)npm install bootstrap@4.0.0-beta popper.js jquery --save-dev https://www.youtube.com/watch?v=AeViodqCt54
-
-b)Edite su archivo /build/webpack.dev.conf.js para agregar un complemento para jQuery y Popper.js para tratar las dependencias (puede leer más aquí en los documentos de Bootstrap):
-
-plugins: [ ... new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery', Popper: ['popper.js', 'default'], // In case you imported plugins individually, you must also require them here: Util: "exports-loader?Util!bootstrap/js/dist/util", Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown", ... }) ... ]
-
-c)Edite /src/main.js para importar Bootstrap en el punto de entrada de la aplicación:
-
-import Vue from 'vue' import App from './App' import router from './router' import 'bootstrap'
-
-d)Edite la parte <style> del archivo App.vue 'para importar Bootsrap al css raíz de su aplicación: 
-
- <template>
-  <div id="app"> <img src="./assets/logo.png"> <router-view></router-view> </div> 
-  </template>
-   <script> export default { name: 'app' }
-   </script> 
-   <style> #app { font-family: 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: center; color: #2c3e50; margin-top: 60px; } @import'~bootstrap/dist/css/bootstrap.css' </style>
-
-e)Ejecute su aplicación Vue desde la CLI:npm start .
-
+4) incluir bootstrap-vue: 
 5) babel: transpilador(package.json estan incluidas las dependencias y en webpack config. las babel.loader)
 
 6)ESlint:set de reglas-customiza estilo de codigo propio(o utiliza los ya definidos)(usamos standartjs)(https://standardjs.com/,https://github.com/standard/eslint-config-standard)(npm i -D descarga e instala en nuestro package.json sin tener que configurar)
@@ -38,10 +15,9 @@ Platzi :
 
 1) Expresiones: 
 
-2) Directivas: Marcadores o atributos para realizar transformaciones en atributos html.
+2) Directivas: Marcadores o atributos para realizar transformaciones en atributos html. Deben representar valores que existan dentro de propiedades metodos,computed o que pertenezcan al v-model.ej.
 
 (v-show: lo oculta / v-if (v-else):lo elimina del DOM).
-
 (v-for:array).
 
 3)DataBinding:(reactividad(codigo-vista => vista-codigo)).
@@ -88,6 +64,7 @@ Limitaciones:(1-data debe ser siempre una funsion que devuelve un objeto(instanc
 
 16)Slots:funcionalidad de los componentes que permite inyectar elemento html de manera dinamica.  
 
-17)Router: se define ,se proporciona elemento html : (router-link : to="...")
+17)Router: se define ,a)se proporciona elemento html : (router-link : to="...").
+b)Codigo
 
 
